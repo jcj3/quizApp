@@ -98,7 +98,7 @@ function userAnswerFeedbackCorrect() {
 //feedback for wrong answer
 function userAnswerFeedbackWrong() {
   let correctAnswer = `${STORE[questionNum].correctAnswer}`;
-  $('.quizForm').html(`<div class="correctFeedback"><h1>Take another sip to help ease the pain of being wrong.</h1><br><img src="https://cdn.pixabay.com/photo/2018/04/22/01/53/drink-3340010_1280.jpg" alt="woman drinking beer from mug"><br><p>The correct answer is <span>"${correctAnswer}"</span></p><button type="button" class="nextButton">Pour Me Another</button></div>`);
+  $('.quizForm').html(`<div class="correctFeedback"><h1>Take another sip to help ease the pain of being wrong.</h1><br><img src="https://cdn.pixabay.com/photo/2018/04/22/01/53/drink-3340010_1280.jpg" alt="woman drinking beer from mug"><p class="wrong">The correct answer is <span>"${correctAnswer}"</span></p><button type="button" class="nextButton">Pour Me Another</button></div>`);
 }
 
 //update score
@@ -118,7 +118,7 @@ function renderNextQuestion() {
 
 //results page
 function renderResults(){
-  $('.quizForm').html(`<h2>Final Score: ${score}/10</h2><p class="finalPageText">Regardless of your final score, always remember to eat while you drink!</p><br><img src="https://cdn.pixabay.com/photo/2015/09/29/12/33/oktoberfest-963852_1280.jpg" alt="bavarian pretzel" class="final"><button type="button" class="restartButton">Try Again?</button></div>`);
+  $('.quizForm').html(`<h2>Final Score: ${score}/10</h2><p class="finalPageText">Regardless of your final score, always remember to eat while you drink!</p><br><img src="https://cdn.pixabay.com/photo/2015/09/29/12/33/oktoberfest-963852_1280.jpg" alt="bavarian pretzel" class="final"><br><button type="button" class="restartButton">Try Again?</button></div>`);
 }
 
 //restart quiz
